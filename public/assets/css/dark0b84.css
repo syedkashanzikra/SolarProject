@@ -1,0 +1,105 @@
+/*  Theme Name: ArtiK
+    Description: Template for Photographers or any Creative Agency
+    Author: WebGraphicArt
+    Version: 2.0
+*/
+
+/*              Artik - Contents
+-------------------------------------------------
+
+1.  Basic
+2.  Typography
+3.  Padding - Margin - Height
+4.  Positions
+5.  Preload
+6.  Navigation Menu
+7.  Cursor
+8.  Slider
+9.  Image Overlay
+10. Video
+11. Parallax
+12. Animation Fade / Zoom
+13. Horizontal Scrolling
+14. Scale Scrolling
+15. Split Text
+16. Reveal Image
+17. Lightbox
+18. Image Hover Effect
+19. Counter
+20. Box Table
+21. Acordion
+22. List
+23. Drag Slider
+24. Line Bar
+25. Sponsor
+26. Footer
+
+------------------------------------------------- */
+
+/*---------------- DARK COLOR SCHEME ----------------*/
+
+body { background-color: var(--dark-1); color: var(--light-1) }
+html { scrollbar-color: #ccd0db #000 }
+body::-webkit-scrollbar { background-color: var(--dark-1) }
+body::-webkit-scrollbar-thumb { background-color: var(--light-1) }
+.ol-dark-top { top: 0; background: rgb(0,0,0); background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.986) 8%, rgba(0, 0, 0, 0.950) 15.4%, rgba(0, 0, 0, 0.9) 22.4%, rgba(0, 0, 0, 0.82) 28.9%, rgba(0, 0, 0, 0.743) 35.2%, rgba(0, 0, 0, 0.65) 41.1%, rgba(0, 0, 0, 0.55) 47%, rgba(0, 0, 0, 0.45) 52.8%, rgba(0, 0, 0, 0.35) 58.9%, rgba(0, 0, 0, 0.26) 64.6%, rgba(0, 0, 0, 0.18) 69.9%, rgba(0, 0, 0, 0.1) 77.4%, rgba(0, 0, 0, 0.05) 84.4%, rgba(0, 0, 0, 0.01) 91.82%, rgba(0, 0, 0, 0) 100%) }
+.ol-dark-bottom { bottom: 0; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.986) 8%, rgba(0, 0, 0, 0.950) 15.4%, rgba(0, 0, 0, 0.9) 22.4%, rgba(0, 0, 0, 0.82) 28.9%, rgba(0, 0, 0, 0.743) 35.2%, rgba(0, 0, 0, 0.65) 41.1%, rgba(0, 0, 0, 0.55) 47%, rgba(0, 0, 0, 0.45) 52.8%, rgba(0, 0, 0, 0.35) 58.9%, rgba(0, 0, 0, 0.26) 64.6%, rgba(0, 0, 0, 0.18) 69.9%, rgba(0, 0, 0, 0.1) 77.4%, rgba(0, 0, 0, 0.05) 84.4%, rgba(0, 0, 0, 0.01) 91.82%, rgba(0, 0, 0, 0) 100%) }
+a { color: var(--light-1) }
+.text-gradient-3 *, .text-gradient-3 { background-image: linear-gradient(180deg, #705A42 0, transparent 90%) }
+.text-gradient-4 *, .text-gradient-4 { background-image: linear-gradient(360deg, #705A42 0, transparent 90%) }
+.loader-bg { background: #111 }
+.percentage { color: var(--light-1) }
+.title-bg-1 { color: var(--dark-4) }
+.js-toolbar { color: var(--light-1) }
+.js-toolbar-fix { background-color: var(--dark-4); color: var(--light-1) }
+.nav-line-t, .nav-line-c, .nav-line-b { background: var(--light-1) }
+.nav-icon-wrap:hover .nav-line-t, .nav-icon-wrap:hover .nav-line-c, .nav-icon-wrap:hover .nav-line-b { background: var(--brown-1) }
+.nav-icon-close:before, .nav-icon-close:after { background: var(--light-1) }
+.nav-container { background-color: var(--dark-4) }
+.nav-v .nav-link-in.nav-menu-link a { color: var(--light-1) }
+.nav-v .nav-link-in.nav-submenu-link a { color: var(--light-1) }
+@supports (mix-blend-mode: exclusion) { .cb-cursor.-exclusion:before, .cb-cursor.-opaque:before { background: var(--light-2) }}
+.cb-cursor-text { color: var(--dark-1) }
+.cb-cursor.-inverse { color: var(--light-2) }
+.-dark-1 { color: rgba(34,34,34,0.90) }
+.-dark-2 { color: rgba(0,0,0,1) }
+.-light-1 { color: rgba(204,208,219,0.70) }
+.-light-2 { color: rgba(255,255,255,1) }
+.-brown { color: rgba(170,143,110,0.70) }
+.slideshow-1 { background-color: var(--dark-1) }
+.slideshow-2 { background-color: var(--dark-1) }
+.slideshow-3 { background-color: var(--dark-3) }
+.slideshow-4 { background-color: var(--dark-1) }
+.slideshow-5 { background-color: var(--dark-3) }
+.slideshow-shape-1 { fill: var(--dark-1) }
+.slideshow-shape-2 { fill: var(--dark-1) }
+.slideshow-shape-3 { fill: var(--dark-3) }
+.slideshow-shape-4 { fill: var(--dark-1) }
+.slideshow-shape-5 { fill: var(--dark-3) }
+.slides-border { border: 1.3rem solid var(--dark-1) }
+@media (max-width: 768px) { .slides-border { border: 0rem solid } }
+.slide-title { color: var(--light-1) }
+.slide-desc { color: var(--light-1) }
+.slide-link { color: var(--light-1) }
+.slidenav-item { color: var(--light-1) }
+.btn-circle-1, .btn-circle-2 { border: 2px solid var(--light-1) }
+.js-scroll-horiz { color: var(--brown-1) }
+.text-scroll-img .text-scroll-h { -webkit-text-stroke-color: var(--dark-1); color: var(--dark-1) }
+.counter-1 { background-color: #080808 }
+.counter-1:hover { background-color: #111 }
+.box-table .lines-hover { border: 1px solid var(--dark-2) }
+.box-table .tb:after,
+.box-table .tb:before,
+.box-table .rl:after,
+.box-table .rl:before { background: -webkit-gradient(linear, right top, left top, color-stop(5%, #333), color-stop(20%, rgba(255, 255, 255, 0.75)), color-stop(75%, rgba(255, 255, 255, 0.85)), to(#333)); background: linear-gradient(270deg, #333 5%, rgba(255, 255, 255, 0.75) 20%, rgba(255, 255, 255, 0.85) 75%, #333) }
+.circle-lg, .circle-sm { border: 1px solid rgba(255, 255, 255, 0.4) }
+.acc-block { border-bottom: 1px solid rgba(255, 255, 255, 0.1) }
+.acc-toggle-icon i { color: #383838 }
+.acc-toggle .acc-block { color: var(--light-1) }
+.list-1 li a:hover { color: var(--light-1) }
+.list-1 li a .list-num { color: var(--light-1); border: 1px solid rgba(255, 255, 255, 0.1) }
+.list-1 li a .list-title { color: var(--light-1) }
+.list-1 li a .list-title p .list-des { color: var(--brown-1) }
+.list-1 li a .list-info { color: var(--light-1) }
+.sponsor-2 li.box-item-wrap { background-color: #080808 }
+.sponsor-2 li.box-item-wrap:hover { background-color: var(--dark-2) }
