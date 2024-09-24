@@ -50,21 +50,23 @@ Contact Details
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    $(document).ready(function () {
-        $('#search').keyup(function () {
-            var search = $("#search").val();
-            var url = "{{ route('contact.search', ':search') }}".replace(':search', search);
+$(document).ready(function () {
+    $('#search').keyup(function () {
+        var search = $("#search").val();
 
-            if (search !== "") {
-                $.get(url, function (data) {
-                    const contacts = JSON.parse(data);
-                    var body = '';
+        if (search !== "") {
+            // Direct URL construction
+            var url = "/getdatacontact/" + search;
 
-                    if (contacts.length <= 0) {
-                        body = "<tr><td colspan='6' class='text-danger'>Contact not found</td></tr>";
-                    } else {
-                        for (let contact of contacts) {
-                            body += `
+            $.get(url, function (data) {
+                var contacts = data; // No need to use JSON.parse, it's already in JSON format
+                var body = '';
+
+                if (contacts.length <= 0) {
+                    body = "<tr><td colspan='6' class='text-danger'>Contact not found</td></tr>";
+                } else {
+                    contacts.forEach(function(contact) {
+                        body += `
                             <tr>
                                 <th>${contact.id}</th>
                                 <td>${contact.Name}</td>
@@ -75,23 +77,24 @@ Contact Details
                                     <a href="/deleteuser${contact.id}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                                 </td>
                             </tr>`;
-                        }
-                    }
+                    });
+                }
 
-                    $("#table-body").html(body);
-                });
-            } else {
-                url = "{{ route('contact.getalldata') }}";
+                $("#table-body").html(body);
+            });
+        } else {
+            // Fetch all contacts if search input is empty
+            var url = "/getdatacontacts";
 
-                $.get(url, function (data) {
-                    const contacts = JSON.parse(data);
-                    var body = '';
+            $.get(url, function (data) {
+                var contacts = data;
+                var body = '';
 
-                    if (contacts.length <= 0) {
-                        body = "<tr><td colspan='6' class='text-danger'>Contact not found</td></tr>";
-                    } else {
-                        for (let contact of contacts) {
-                            body += `
+                if (contacts.length <= 0) {
+                    body = "<tr><td colspan='6' class='text-danger'>Contact not found</td></tr>";
+                } else {
+                    contacts.forEach(function(contact) {
+                        body += `
                             <tr>
                                 <th>${contact.id}</th>
                                 <td>${contact.Name}</td>
@@ -102,13 +105,15 @@ Contact Details
                                     <a href="/deleteuser${contact.id}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                                 </td>
                             </tr>`;
-                        }
-                    }
+                    });
+                }
 
-                    $("#table-body").html(body);
-                });
-            }
-        });
+                $("#table-body").html(body);
+            });
+        }
     });
+});
+
+
 </script>
 @endsection

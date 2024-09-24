@@ -35,16 +35,25 @@ class ContactDetailsController extends Controller
     }
 
     //Search
-    public function contactsearch($input){
-
-
-        $searchinput = $input."%";
-        
+    public function contactsearch($input)
+    {
+        // Search contacts based on the input
+        $contacts = ContactUs::where('Name', 'like', "%{$input}%")->get();
     
-            $contacts = ContactUs::where("Name" , "like" , $searchinput)->get();
-            return json_encode($contacts);
-                  
+        // Return as JSON response
+        return response()->json($contacts);
     }
+    
+    
+    public function getAllContacts()
+{
+    // Fetch all contacts
+    $contacts = ContactUs::all();
+
+    // Return as JSON response
+    return response()->json($contacts);
+}
+
     
     //GET ALL DATA
     public function getalldatacontact()

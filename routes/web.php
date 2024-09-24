@@ -88,7 +88,12 @@ Route::post('/email',[AnaliyzeController::class,'emailfun']);
 // Search
 Route::get("/getdataproducts/{input}", [ShopController::class, "shopsearch"])->name('product.search');
 Route::get("/getdatauser/{input}", [DashboardController::class, "usersearch"])->name('user.search');
-Route::get("/getdatacontact/{input}", [ContactDetailsController::class, "contactsearch"])->name('contact.search');
+// Route for searching contacts by input
+Route::get('/getdatacontact/{input}', [ContactDetailsController::class, 'contactsearch']);
+
+// Route for fetching all contacts when search input is empty
+Route::get('/getdatacontacts', [ContactDetailsController::class, 'getAllContacts']);
+
 Route::get("/getdatacontact/{input}", [ManageProductController::class, "managesearch"])->name('manage.search');
 
 // Get all data

@@ -20,7 +20,7 @@ Contact
                         </h1>
                        
                         <h3 class="h6 mb-5 mw-600 mx-auto">
-                  Shoot us an email at ubaidullah2206f@gmail.com, and we'll promptly get back to you with the information you need. Feel free to share your project details, and our team will offer personalized recommendations.                        </h3>
+                  Shoot us an email at abbaskasahn234@gmail.com, and we'll promptly get back to you with the information you need. Feel free to share your project details, and our team will offer personalized recommendations.                        </h3>
                      </div>
                   </div>
                   <div class="col-12 col-md-11 mt-8 mb-8 position-relative">
