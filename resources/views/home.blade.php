@@ -270,69 +270,7 @@ Solar Consult
                   </div>
                </div>
             </section>
-            <section class="container-fluid m-section-150">
-               <div class="row justify-content-evenly">
-                  <div class="col-12 col-md-12 position-relative">
-                     <h3 class="title-bg-1 js-zoom-in" data-speed="1.05">
-                        Teams
-                     </h3>
-                     <div class="text-absolute w-100">
-                        <h3 class="js-split-lines-up h4 offset-2" data-speed="1.02">
-                           <span class="fc-brown-1 h5"><i>&#8212;</i> We Offer Quality</span><br>
-                           Trusted Experts only<br>
-                           We make Creative Things!
-                        </h3>
-                     </div>
-                  </div>
-                  
-                  <div class="col-md-3">
-                     <div class="grid-item js-reveal-img-l grid-item-40" data-cursor="-exclusion -sm">
-                        <div class="grid-item-img-v reveal-img-l" 
-                             data-displacement="../assets/img/textures/mask-37.jpg" 
-                             data-intensity1="1" 
-                             data-intensity2="-1" 
-                             data-angle1="" 
-                             data-angle2="" 
-                             data-ease="circ.out">
-                           <img src="../assets/img/ubaid1.jpg" alt="Image">
-                           <img src="../assets/img/ubaid2.jpg" alt="Image">
-                           <div class="grid-item-content">
-                              <h3 class="grid-item-subtitle">
-                                 <span><i>&#8226;</i> Developer</span>
-                                 <a class="grid-item-link" href="https://www.instagram.com/ubaidkhan__3/">Learn more</a>
-                              </h3>
-                           </div>
-                        </div>
-                     </div>
-                     <h3 class="js-split-chars-l h5 text-center mt-4 mb-5">
-                       Ubaid Ullah
-                     </h3>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="grid-item js-reveal-img-l grid-item-40" data-cursor="-exclusion -sm">
-                        <div class="grid-item-img-v reveal-img-l" 
-                             data-displacement="../assets/img/textures/mask-37.jpg" 
-                             data-intensity1="1" 
-                             data-intensity2="-1" 
-                             data-angle1="" 
-                             data-angle2="" 
-                             data-ease="circ.out">
-                             <img src="../assets/img/yousuf2.png" alt="Image">
-                           <img src="../assets/img/yousuf1.png" alt="Image">
-                           <div class="grid-item-content">
-                              <h3 class="grid-item-subtitle">
-                                 <span><i>&#8226;</i> Developer</span>
-                                 <a class="grid-item-link" href="https://www.instagram.com/yousufsiddiquie/">Learn more</a>
-                              </h3>
-                           </div>
-                        </div>
-                     </div>
-                     <h3 class="js-split-chars-l h5 text-center mt-4 mb-5">
-                        Yousuf
-                     </h3>
-                  </div>
-               </div>
-            </section>
+      
            
             <div class="js-drag-slider-wrap">
                <div class="js-drag-slider-inner">
